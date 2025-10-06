@@ -25,7 +25,7 @@ library(webshot2)
 args <- commandArgs(TRUE)
 i <- read.table(args[1], sep="\t", header=F)
 j <- read.nhx(args[2])
-filename <- args[1]
+filename <- gsub("TabFiles/","", args[1])
 
 # i <- read.table("/Users/of2/Documents/Complex_Portal/ComPred/microsporidia.tab", sep="\t", header=F)
 # j <- read.nhx("/Users/of2/Documents/Complex_Portal/ComPred/microsporidia.nwk")
